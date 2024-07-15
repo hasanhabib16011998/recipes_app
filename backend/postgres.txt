@@ -14,3 +14,5 @@ username:habib
 pass:habib2024
 
 docker-compose exec backend python manage.py migrate --noinput
+
+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
