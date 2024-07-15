@@ -1,0 +1,16 @@
+sudo su -p postgres
+psql
+CREATE DATABASE my_db;
+CREATE USER habib WITH PASSWORD 'ha5anha6i6@16';
+ALTER ROLE habib SET client_encoding TO 'utf8';
+ALTER ROLE habib SET default_transaction_isolation TO 'read committed';
+ALTER ROLE habib SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE my_db TO habib;
+ALTER ROLE habib SUPERUSER;
+Create extension postgis;
+
+superuser:
+username:habib
+pass:habib2024
+
+docker-compose exec backend python manage.py migrate --noinput
